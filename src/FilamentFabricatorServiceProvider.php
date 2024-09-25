@@ -124,7 +124,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
                         Str::of($file->getPath())
                             ->after(base_path())
                             ->replace(['/'], ['\\']),
-                    ) : null;
+                    ) : '';
 
                     return (string) $namespace
                         ->append('\\', $file->getRelativePathname())
